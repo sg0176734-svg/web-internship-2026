@@ -6,9 +6,10 @@
 
 body{
     font-family: Arial, sans-serif;
-    background-color: #f4f6f9;
+    background-color:pink;
     color: #333;
     line-height: 1.6;
+    
 }
 
 /* Header */
@@ -36,7 +37,11 @@ nav a{
 nav a:hover{
     color: yellow;
 }
-
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
 /* Sections */
 h2{
     color: #2563eb;
@@ -117,4 +122,49 @@ footer{
     color: white;
     padding: 15px;
     margin-top: 30px;
+}/* Fixed pixel widths */
+.grid {
+    grid-template-columns: 200px 400px 200px;
+}
+
+/* Fractional units */
+.grid {
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+/* repeat() shorthand */
+.grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid {
+    grid-template-columns: repeat(3, 200px);
+}
+
+.grid {
+    grid-template-columns: repeat(2, 1fr 2fr);
+}
+
+/* Mixed units */
+.layout {
+    grid-template-columns: 260px 1fr;
+}
+
+.layout {
+    grid-template-columns: 260px 1fr 200px;
+}
+
+/* auto */
+.grid {
+    grid-template-columns: auto 1fr auto;
+}
+
+/* Defining rows */
+.layout {
+    grid-template-rows: 64px 1fr 56px;
+}
+
+/* Shorthand */
+.layout {
+    grid-template: 64px 1fr 56px / 260px 1fr 200px;
 }
